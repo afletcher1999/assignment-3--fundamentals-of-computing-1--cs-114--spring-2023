@@ -1,4 +1,3 @@
-import java.awt.Color;
 public class Matrix {
   private int[][] matrix;
   private int size;
@@ -6,14 +5,15 @@ public class Matrix {
   public Matrix(int size) {
     this.size = size;
     matrix = new int[size][size];
+
     System.out.printf("Created %dx%d matrix.\n", size, size);
   }
 
   private void swap(int x1, int y1, int x2, int y2) {
-    if (x1 + y1 == size - 1 || x2 + y2 == size - 1) {
+    if (x1 + y1 == size - 1 || x2 + y2 == size - 1) { //Finds the index elements of the diagonal
       return; // do not swap elements on the diagonal
     }
-    int temp = matrix[x1][y1];
+    int temp = matrix[x1][y1]; //Swaps the elements
     matrix[x1][y1] = matrix[x2][y2];
     matrix[x2][y2] = temp;
   }
