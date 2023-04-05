@@ -22,10 +22,10 @@ public class Matrix {
     for (int row = 0; row < size; row++) {
       for (int col = 0; col < size; col++) {
         if (row + col == size - 1) {
-          System.out.print("\u001B[33m"); // set background color to yellow using ANSI escape code
+          System.out.print("\u001B[33m"); // set text color to yellow using ANSI escape code
         }
         System.out.printf("%-4d", matrix[row][col]);
-        System.out.print("\u001B[0m"); // reset background color
+        System.out.print("\u001B[0m"); // reset text color
       }
     System.out.println();
     }
